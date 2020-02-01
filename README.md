@@ -13,7 +13,7 @@ Tel:*+254796577998.*
 
 ### Project Description.
 
-
+News_Highlight is a web application that displays a list of news sources globally. A user is able to keep up with the current affairs in case he/she misses the aired updates of the world's status on recognized tv channels such as CNN.
 
 #### Project-Setup Instructions.
 
