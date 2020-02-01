@@ -49,4 +49,38 @@ def process_source(news_list):
             news_object = News(id,title,author,description, author, content, publishedAt)
             movie_results.append(movie_object)
 
- return news_source   
+ return news_source 
+
+ def get_news(id):
+   get_news_details_url = base_url.format(id,api_key)
+   with urllib.request.urlopen(get_news_details_url) as url:
+     news_details_data = url.read()
+     news_details_response = json.loads(News_details_data)
+
+     news_object = None
+     if news_details_response:
+       id = news_details_response.get('id')
+       title = news_details_response.get('original_title') 
+
+       author = news_details_response.get('author')
+       description = news_details_response.get('description')
+       publishedAt = news_details_response.get('publshedAt')
+       content = news_details_response.get('content')
+
+       news_object = News(id,title,author,description,publishedAt,content)
+       return news_object
+
+ def search_news(news_name):
+   search_news_url = 'https://newsapi.org/v2/everything?q=bitcoin&from=2019-12-31&sortBy=publishedAt&apiKey=API_KEY',format(api_key,news_name)
+   with urllib.request.urlopen(search_news_url) as url:
+     search_news_data = url.read()
+     search_news_response = json.loads(search_news_data)
+
+     search_news_source = None
+
+     if search_news_response['source']:
+       search_news_list = search_news_response['source']
+       search_news_source = process_source(search_news_list) 
+
+      return search_news_source 
+      
