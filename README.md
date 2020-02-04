@@ -21,18 +21,17 @@ News_Highlight is a web application that displays a list of news sources globall
 
 2.In antomuli's repositories; git clone the News_Highlight repository into your local repository using the following link: 
 
-3.Open your terminal and run the command ./run.py to open the website.
+3.Open your terminal and run the command ./manage.py to open the website.
 
 ***BDD***
 
 | Behaviour | Input | Output |
 | --------- | ------| ------ |
-|Open your terminal|Type this command in the terminal **./run.py** and press  `enter`|The server runs the application in the client|
-<!-- |Input data to answer the query asked   |Press enter key |Some short commands appear
-|Redirects the user on some instructions on how to manouvre through the application| Type any of the short commands of your choice | Follow them through to create an **account** for instance| -->
+|Open your terminal|Type this command in the terminal **./manage.py** and press  `enter`|The server runs the application in the client|
 
-##### Github-link to News_Highlight
-The following is the github link to the project "News_Highlight":
+
+##### Heroku-link to News_Highlight
+The following is the heroku link to the project "News_Highlight":  https://trial-news.herokuapp.com/
 This site lacks github pages:
  
 ##### CODEBEAT
