@@ -1,46 +1,24 @@
+{% extends 'base.html' %}
+{% import "macro.html" as macro %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset = "utf-8">
-  { % if title %}
-  <title>{{ title }}</title>
-  {% else %}
-  <title>Welcome to the updated news_highlight website{% endif %}</title>
 </head>
 <body>
-  {% extends 'base.html' %}
   <!-- content block -->
   {% block content %}
   <div class="container">
+    <u><h1 class="text-center" style="font-size: 80px;">NEWS SOURCES</h1></u>
+      <hr>
 
       <!-- Poster background -->
       <div class="row">
-          <div class="row">
-
-              <h1>Reviews</h1>
-              <hr>
-      
-              {% if reviews %}
-                  {{macro.displayReviews(reviews)}}
-      
-              {% else%}
-                  <h3 class="text-center">This movie has no reviews </h3>
-      
-                  <a class="btn btn-success btn-lg text-center" href="/movie/review/new/{{movie.id}}"> Write a new review</a>
-              {% endif %}
-      
-          </div>
-          <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath" style="background: url({{news.poster}}) no-repeat center center">
-          </div>
-  
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 news-details">
-              <h3>{{ news.title }}</h3>
-  
-              <p class="author"> {{ news.author }}</p>
-              <p class="publishedAt"> <b> {{ publishedAt }}</b> - <i>{{ publishedAt}} </i> </p>
-  
-              <a class="ratings" href="/news/review/new/{{news.id">Feel free to write a review</a>
-          </div> -->
+        {% if news %}
+            {{macro.displayNews(news)}}
+        {% else %}
+            <h3 class="text-center">You have no news </h3>
+        {% endif %}
       </div>
   
   </div>

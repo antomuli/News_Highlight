@@ -11,34 +11,11 @@
 </head>
 <body>
   <!-- Block styles -->
-  {{super()}}
-  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-  {% endblock %}
+  
   <!-- content block -->
   {% block content %}
 
 
-<div class="container">
-    <form>
-        <input type="text" name="news_query" placeholder="Search for any News" class="form-control">
-        <input type="submit"  value="Submit" class="btn btn-default">
-    </form>
-
-</div>
-    <!-- Popular news section  -->
-    <h4> Trending News</h4>
-     <ul>
-        {{ macro.displayNewsList(trending)}}
-    </ul>
-    <!-- sports news -->
-    <h4>Sports News</h4>
-    <ul>
-      {{ macro.displayNewsList(sports)}}
-    </ul>
-    <h4>Business News</h4>
-    <ul>
-      {{ macro.displayNewsList(business)}}
-    </ul>
 {% endblock %}
 </body>
 </html>

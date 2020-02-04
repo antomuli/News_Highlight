@@ -46,6 +46,8 @@ This site lacks github pages:
 
 **Flask**
 
+**Bootstrap**
+
 ***Known Bugs***
 
 The UI is 40% user friendly.

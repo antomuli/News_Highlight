@@ -1,11 +1,11 @@
-class config:
+class Config:
     '''
     general configuration parent class
     '''
-    pass
-    NEWS_API_BASE_URL = 'https://newsapi.org/v2/everything?q=bitcoin&from=2019-12-31&sortBy=publishedAt&apiKey=API_KEY'
+    NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?language=en&apiKey={}'
+    NEWS_ARTICLE_URL = 'https://newsapi.org/v2/everything?sources={}&apiKey={}'
 
-class ProdConfig(config):
+class ProdConfig(Config):
     '''
     production configuration child class
     
@@ -14,7 +14,7 @@ class ProdConfig(config):
     ''' 
     pass
 
-class DevConfig(config):
+class DevConfig(Config):
     '''
     development configuration child class
 
