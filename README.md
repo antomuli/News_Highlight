@@ -36,7 +36,7 @@ This site lacks github pages:
  
 ##### CODEBEAT
 
-[![codebeat badge](https://codebeat.co/badges/817ac1c4-1195-4527-bdfe-265a776bdad2)](https://codebeat.co/projects/github-com-antomuli-password-locker-master)
+[![codebeat badge](https://codebeat.co/badges/aed39cd0-b308-4113-b6ec-4120c177824f)](https://codebeat.co/projects/github-com-antomuli-news_highlight-master)
 
 
 **The following include the list of technologies used:**
